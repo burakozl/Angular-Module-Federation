@@ -10,3 +10,7 @@ body {
 .body-pd {
   padding-left: calc(var(--nav-width) + 1rem)
 }
+
+html:lang(ar) * {
+  text-align: right;
+}

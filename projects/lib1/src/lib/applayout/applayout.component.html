@@ -2,11 +2,20 @@
   <div class="header_toggle">
     <i class="bx bx-menu" id="header-toggle"></i>
   </div>
-  <div class="header_img">
-    <img
-      src="https://avatars.githubusercontent.com/u/106114515?s=400&u=03b1cb42edc4687987dba80caf45a561ed341d0c&v=4"
-      alt=""
-    />
+  <div class="d-flex justify-content-center align-items-center">
+    <div>
+      <select class="custom-select" (change)="changeLang($event)">
+        <option value="en" [selected]="lang === 'en'">English</option>
+        <option value="de" [selected]="lang === 'de'">Deutsch</option>
+        <option value="ar" [selected]="lang === 'ar'">عربى</option>
+      </select>
+    </div>
+    <div class="header_img mx-2">
+      <img
+        src="https://avatars.githubusercontent.com/u/106114515?s=400&u=03b1cb42edc4687987dba80caf45a561ed341d0c&v=4"
+        alt=""
+      />
+    </div>
   </div>
 </header>
 <div class="l-navbar" id="nav-bar">
@@ -14,38 +23,38 @@
     <div>
       <a routerLink="/" class="nav_logo">
         <i class="bx bx-layer nav_logo-icon"></i>
-        <span class="nav_logo-name">MFE Example</span>
+        <span class="nav_logo-name">{{ "MFE Example" | translate }}</span>
       </a>
       <div class="nav_list">
         <a routerLink="/dashboard" class="nav_link">
           <i class="bx bx-grid-alt nav_icon"></i>
-          <span class="nav_name">Dashboard</span>
+          <span class="nav_name">{{ "Dashboard" | translate }}</span>
         </a>
         <a routerLink="/employees" class="nav_link">
           <i class="bx bx-user nav_icon"></i>
-          <span class="nav_name">Users</span>
+          <span class="nav_name">{{ "Employees" | translate }}</span>
         </a>
         <a routerLink="/sample" class="nav_link">
           <i class="bx bx-message-square-detail nav_icon"></i>
-          <span class="nav_name">Sample</span>
+          <span class="nav_name">{{ "Sample" | translate }}</span>
         </a>
         <a routerLink="/" class="nav_link">
           <i class="bx bx-bookmark nav_icon"></i>
-          <span class="nav_name">Bookmark</span>
+          <span class="nav_name">{{ "Bookmark" | translate }}</span>
         </a>
         <a routerLink="/" class="nav_link">
           <i class="bx bx-folder nav_icon"></i>
-          <span class="nav_name">Files</span>
+          <span class="nav_name">{{ "Files" | translate }}</span>
         </a>
         <a routerLink="/" class="nav_link">
           <i class="bx bx-bar-chart-alt-2 nav_icon"></i>
-          <span class="nav_name">Stats</span>
+          <span class="nav_name">{{ "Stats" | translate }}</span>
         </a>
       </div>
     </div>
     <a routerLink="/" class="nav_link">
       <i class="bx bx-log-out nav_icon"></i>
-      <span class="nav_name">SignOut</span>
+      <span class="nav_name">{{ "SignOut" | translate }}</span>
     </a>
   </nav>
 </div>

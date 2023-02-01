@@ -1,3 +1,27 @@
-<p>sample works!</p>
-<p>This is a sample image</p>
-<img class="image" src="../../assets/app1-images/sample.png" alt="sample" />
+<div class="container">
+  <div class="row d-flex align-items-center">
+    <div class="col-4" *ngIf="lang !== 'ar'">
+      <img
+        class="image"
+        src="../../assets/app1-images/sample.png"
+        alt="sample"
+      />
+    </div>
+    <div class="col-8">
+      <h2>{{ "What is ERP (enterprise resource planning)?" | translate }}</h2>
+      <p>
+        {{
+          "ERP, or enterprise resource planning, is software designed to manage and integrate the functions of core business processes like finance, HR, supply chain and inventory management in a single system."
+            | translate
+        }}
+      </p>
+    </div>
+    <div class="col-4" *ngIf="lang === 'ar'">
+      <img
+        class="image"
+        src="../../assets/app1-images/sample.png"
+        alt="sample"
+      />
+    </div>
+  </div>
+</div>
