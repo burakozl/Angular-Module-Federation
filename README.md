@@ -1,6 +1,7 @@
 # SampleWorkspace
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+After `npm install` `ng serve shell` `ng serve app1` `ng serve dashboard` `ng serve employees` shell will work on `http://localhost:8000`
 
 ## Development server
 
